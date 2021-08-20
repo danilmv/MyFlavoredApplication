@@ -29,6 +29,29 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    flavorDimensions 'colors'
+    productFlavors {
+        red {
+            dimension 'colors'
+            applicationIdSuffix '.red'
+            versionNameSuffix '-red_one'
+            buildConfigField "String", "MOTO", "\"red is the color!\""
+        }
+        green {
+            dimension 'colors'
+            applicationIdSuffix '.green'
+            versionNameSuffix '-green_one'
+            buildConfigField "String", "MOTO", "\"there is no color but green\""
+        }
+        blue {
+            dimension 'colors'
+            applicationIdSuffix '.blue'
+            versionNameSuffix '-blue_one'
+            buildConfigField "String", "MOTO", "\"who cares?\""
+        }
+    }
+
+
 }
 
 dependencies {
